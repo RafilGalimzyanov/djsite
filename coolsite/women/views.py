@@ -2,7 +2,7 @@ from django.http import HttpResponse, HttpResponseNotFound
 from django.shortcuts import render, redirect
 
 def index(request):
-    return HttpResponse('Страница приложения women.')
+    return render(request, '') #Второй параметр -- путь к шаблону
 
 def categories(request, catid):
     if(request.GET):
