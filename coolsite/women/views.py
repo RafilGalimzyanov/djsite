@@ -1,13 +1,20 @@
 from django.http import HttpResponse, HttpResponseNotFound
 from django.shortcuts import render, redirect
 
-def index(request):
-    return render(request, '') #Второй параметр -- путь к шаблону
+from .models import *
+menu = ["О сайте", "Добавить статью", "Обратная связь", "Войти"]
 
+def index(request):
+    posts = Women.objects.all()
+    return render(request, 'women/index.html', {'posts': posts, 'menu': menu ,'title': 'Главная страница'}) #Второй параметр -- путь к шаблону, путь такой, потому что Django сам ищет в templates
+                                                                            # Третий параметр - параметр, передаваемый шаблонам. Словари
 def categories(request, catid):
     if(request.GET):
         print(request.GET)
     return HttpResponse(f'<h1>Статьи по категориям</h1><p>{catid}</p>')
+
+def about(request):
+    return render(request, 'women/about.html', {'menu': menu ,'title': 'О сайте'})
 
 def archive(request, year):
     if int(year) > 2030:
