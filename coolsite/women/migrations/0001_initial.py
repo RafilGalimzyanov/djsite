@@ -9,7 +9,7 @@ class Migration(migrations.Migration):
 
     dependencies = [
     ]
-
+# ID объекту класса присваивается по умолчанию при создании экземпляра
     operations = [
         migrations.CreateModel(
             name='Women',
