@@ -9,7 +9,7 @@ class Women(models.Model): #Наследуем от базового класс�
     content = models.TextField(blank=True) # Текст статьи, параметр значит, что поле может быть пустым
     photo = models.ImageField(upload_to='photos/%Y/%n/%d/') # Ссылка на фотографию поста
     time_create = models.DateTimeField(auto_now_add=True) # Время создания, поле не меняется после создания
-    time_update = models.DateTimeField(auto_now=True) # Время последнего редактирования, поле будет меняться каждый раз
+    time_update = models.DateTimeField(auto_now=True) # Время последнего редактирования статьи, поле будет меняться каждый раз
     is_published = models.BooleanField(default=True) # По умолчанию ставим True
 
     def __str__(self):
