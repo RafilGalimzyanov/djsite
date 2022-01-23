@@ -2,7 +2,7 @@ from django.http import HttpResponse, HttpResponseNotFound
 from django.shortcuts import render, redirect
 
 from .models import *
-menu = ["О сайте", "Добавить новую статью", "Наши контакты", "Войти", "Авторизоваться"]
+menu = ["О сайте", "Добавить новую статью", "Обратная связь", "Войти", "Авторизоваться"]
 
 def index(request):
     posts = Women.objects.all()
@@ -10,7 +10,7 @@ def index(request):
                                                                             # Третий параметр - параметр, передаваемый шаблонам. Словари
 def categories(request, catid):
     if(request.GET):
-        print(f'Вывод GET запроса', request.GET)
+        print(f'Вывод GET запроса ', request.GET)
     return HttpResponse(f'<h1>Статьи по категориям</h1><p>{catid}</p>')
 
 def about(request):
