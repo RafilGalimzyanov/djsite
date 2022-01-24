@@ -11,7 +11,7 @@ def index(request):
 def categories(request, catid):
     if(request.GET):
         print(f'Вывод GET запроса ', request.GET)
-    return HttpResponse(f'<h1>Статьи по категориям</h1><p>{catid}</p>')
+    return HttpResponse(f'<h1>Статьии по категориям</h1><p>{catid}</p>')
 
 def about(request):
     return render(request, 'women/about.html', {'menu': menu ,'title': 'О сайте'})
