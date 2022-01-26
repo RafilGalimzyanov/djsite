@@ -14,7 +14,7 @@ def categories(request, catid):
     return HttpResponse(f'<h1>Статьии по категориям</h1><p>{catid}</p>')
 
 def about(request):
-    return render(request, 'women/about.html', {'menu': menu ,'title': 'О сайте'})
+    return render(request, 'women/about.html', {'menu': menu ,'title': 'О сайтее'})
 
 def archive(request, year):
     if int(year) > 2050:
