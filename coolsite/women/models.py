@@ -4,7 +4,7 @@ from django.db import models
 Описание модели
 """
 
-class Women(models.Model): #Наследуем от базового класса Model, поле id прописано в Model
+class Women(models.Model): #Наследуем от базового класса model, поле id прописано в Model
     title = models.CharField(max_length=255) # Текстовое поле длиной до 255
     content = models.TextField(blank=True) # Текст статьи, параметр значит, что поле может быть пустым
     photo = models.ImageField(upload_to='photos/%Y/%n/%d/') # Ссылка на фотографию поста
