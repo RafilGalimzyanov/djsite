@@ -10,7 +10,7 @@ def index(request):
                                                                             # Третий параметр - параметр, передаваемый шаблонам. Словари
 def categories(request, catid):
     if(request.GET):
-        print(f'Вывод GET запроса ', request.GET)
+        print(f'Выво GET запроса ', request.GET)
     return HttpResponse(f'<h1>Статьии по категориям</h1><p>{catid}</p>')
 
 def about(request):
