@@ -19,7 +19,7 @@ def about(request):
 def archive(request, year):
     if int(year) > 2050:
         return redirect('home', permanent=True)
-    return HttpResponse(f'archive - {year}.')
+    return HttpResponse(f'Архив - {year}.')
 
 def pageNotFound(request, exception):
     return HttpResponseNotFound(f'<h1>Страница не найдена </h1>')
