@@ -7,7 +7,7 @@ menu = ["О сайте", "Добавить новую статью", "Обрат
 def index(request):
     posts = Women.objects.all()
     return render(request, 'women/index.html', {'posts': posts, 'menu': menu ,'title': 'Главная страница'}) #Второй параметр -- путь к шаблону, путь такой, потому что Django сам ищет в templates
-                                                                            # Третий параметр - параметр, передаваемый шаблонам. Словари
+                                                                            # Трети параметр - параметр, передаваемый шаблонам. Словари
 def categories(request, catid):
     if(request.GET):
         print(f'Выво GET запроса ', request.GET)
