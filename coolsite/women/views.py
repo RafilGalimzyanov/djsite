@@ -17,7 +17,7 @@ def about(request):
     return render(request, 'women/about.html', {'menu': menu ,'title': 'О сайтее'})
 
 def archive(request, year):
-    if int(year) > 200:
+    if int(year) > 2010:
         return redirect('home', permanent=True)
     return HttpResponse(f'Архив - {year}.')
 
